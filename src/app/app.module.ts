@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { BeersComponent } from './components/beers/beers.component';
 import { GridComponent } from './components/grid/grid.component';
 import { AccordionComponent } from './components/shared/accordion/accordion.component';
+import { WordlimitPipe } from './transform/wordlimit.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeersComponent,
     GridComponent,
-    AccordionComponent
+    AccordionComponent,
+    WordlimitPipe
   ],
   imports: [
     BrowserModule,

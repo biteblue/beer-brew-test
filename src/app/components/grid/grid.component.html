@@ -1,1 +1,23 @@
-<p>grid works!</p>
+<div class="sort-container">
+    <button (click)="sort(item)" *ngFor="let item of sorts">
+        Sort by {{item}} 
+        <div *ngIf="sortStructure[item].type == 'number'">
+            <span *ngIf="!sortStructure[item].whichWay">(desc)</span>
+            <span *ngIf="sortStructure[item].whichWay">(asc)</span>
+        </div>
+    </button>
+</div>
+
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let item of beers">
+        <div class="grid-item__img" style="background-image:url({{item['image_url']}})">
+        </div>
+        <div class="grid-item__content">
+            <h3>{{item['name']}}</h3>
+            <p class="abv">Abv: {{item['abv']}}</p>
+            <p>First brewed: {{item['first_brewed']}}</p>
+            <p>{{item['description'] | wordlimit: 10 }}</p>
+            <small>PH: {{item['ph']}}</small>
+        </div>
+    </div>
+</div>
