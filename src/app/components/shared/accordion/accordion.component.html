@@ -1,1 +1,10 @@
-<p>accordion works!</p>
+<div class="accord">
+    <div #accordHeader (click)="toggle(beer)" class="accord__header">
+      <h5>{{beer['name']}}</h5>
+      <p>{{beer['tagline']}}</p>
+      <span class="icon" #accordNav>▼</span>
+    </div>
+    <div #accordBody class="accord__content">
+      {{beer['description']}}
+    </div>
+  </div>
