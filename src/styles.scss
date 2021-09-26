@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/*------------------------
+----Global Scss
+------------------------*/
+
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size:$font-base;
+    padding:2rem;
+    background-color:$white;
+    color:$text-color;
+}
+
+header {
+    margin-bottom: $margin-lg;
+    border-bottom:10px solid #5874f0;
+    margin-bottom:$margin-lg;
+
+    .logo {
+        font-size: $font-base*2;       
+    }
+}

@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BeersComponent } from './components/beers/beers.component';
 import { GridComponent } from './components/grid/grid.component';
+import { AccordionComponent } from './components/shared/accordion/accordion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeersComponent,
-    GridComponent
+    GridComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
