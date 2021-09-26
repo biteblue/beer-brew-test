@@ -15,6 +15,7 @@ export class AccordionComponent implements OnInit {
   ingredients = [];
 
   ngOnInit(): void {
+    this.formatIngredients();
   }
 
   toggle(item: any) {
@@ -29,6 +30,16 @@ export class AccordionComponent implements OnInit {
     this.content.nativeElement.style.height = height;
     this.arrow.nativeElement.style.transform = `scaleY(${rotate}1)`;
     item['inView'] = !item['inView'];
+  }
+  
+  formatIngredients(){
+    for(const [k,v] of Object.entries(this.beer['ingredients'])){
+      let tempArr = [];
+      if(Array.isArray(v)){
+        for(var i =0;i<v.length;i++) tempArr.push(v[i]['name']);
+      }     
+      this.ingredients.push({name: k, value: (tempArr.length > 0 ? tempArr.join(', ') : v)});
+    }
   }
 
 }

@@ -6,5 +6,15 @@
     </div>
     <div #accordBody class="accord__content">
       {{beer['description']}}
+      <h4>
+        Ingredients
+      </h4>
+      <ul>
+        <li *ngFor="let ing of ingredients">{{ing['name'] | uppercase}}
+          <ul>
+            <li>{{ing['value']}}</li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
